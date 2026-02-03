@@ -13,7 +13,7 @@
         }
         
         body {
-            background: linear-gradient(135deg, #1a2980, #26d0ce);
+            background: linear-gradient(135deg, #0c2461, #1e3799);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -23,33 +23,35 @@
         }
         
         .weather-container {
-            background-color: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.97);
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             width: 100%;
-            max-width: 800px;
+            max-width: 900px;
             overflow: hidden;
             padding: 40px;
+            position: relative;
         }
         
         .header {
             text-align: center;
             margin-bottom: 40px;
-            border-bottom: 2px solid #e0e0e0;
+            border-bottom: 3px solid #e0e0e0;
             padding-bottom: 25px;
         }
         
         .city-name {
-            font-size: 3.2rem;
-            color: #1a2980;
+            font-size: 3.5rem;
+            color: #0c2461;
             margin-bottom: 10px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            letter-spacing: 1px;
         }
         
         .date {
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: #666;
-            font-weight: 500;
+            font-weight: 600;
         }
         
         .weather-main {
@@ -67,32 +69,34 @@
         }
         
         .temperature {
-            font-size: 8rem;
-            font-weight: 800;
-            color: #1a2980;
+            font-size: 9rem;
+            font-weight: 900;
+            color: #0c2461;
             line-height: 1;
             margin: 20px 0;
             position: relative;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.1);
         }
         
         .temp-minus {
-            color: #2d5aa0;
-        }
-        
-        .temp-value {
             color: #1a2980;
         }
         
+        .temp-value {
+            color: #0c2461;
+        }
+        
         .temp-unit {
-            font-size: 4rem;
+            font-size: 4.5rem;
             vertical-align: super;
-            color: #26d0ce;
+            color: #3498db;
         }
         
         .temperature-variation {
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: #666;
-            margin-top: 10px;
+            margin-top: 15px;
+            font-weight: 600;
         }
         
         .weather-icon {
@@ -102,33 +106,35 @@
         }
         
         .icon {
-            font-size: 12rem;
-            color: #26d0ce;
+            font-size: 13rem;
+            color: #3498db;
             margin-bottom: 20px;
+            filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.1));
         }
         
         .weather-description {
-            font-size: 2rem;
-            color: #1a2980;
-            font-weight: 600;
+            font-size: 2.2rem;
+            color: #0c2461;
+            font-weight: 700;
         }
         
         .weather-details {
-            background-color: #f8f9fa;
-            border-radius: 15px;
-            padding: 30px;
+            background-color: #f1f8ff;
+            border-radius: 20px;
+            padding: 35px;
             margin-top: 30px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            gap: 25px;
+            border: 2px solid #e0f0ff;
         }
         
         .detail-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
-            border-bottom: 1px solid #eaeaea;
+            padding: 18px 0;
+            border-bottom: 2px solid #e0f0ff;
         }
         
         .detail-item:last-child {
@@ -136,33 +142,43 @@
         }
         
         .detail-label {
-            font-size: 1.3rem;
-            color: #666;
+            font-size: 1.4rem;
+            color: #555;
+            font-weight: 500;
         }
         
         .detail-value {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #1a2980;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0c2461;
         }
         
         .footer {
             text-align: center;
             margin-top: 40px;
-            color: #888;
-            font-size: 1.1rem;
+            color: #777;
+            font-size: 1.2rem;
             padding-top: 20px;
-            border-top: 1px solid #eee;
+            border-top: 2px solid #eee;
         }
         
         .cold-warning {
-            background-color: #e3f2fd;
-            border-left: 5px solid #1a2980;
-            padding: 20px;
-            border-radius: 10px;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border-left: 8px solid #0c2461;
+            padding: 25px;
+            border-radius: 15px;
             margin-top: 30px;
-            font-size: 1.3rem;
-            color: #1a2980;
+            font-size: 1.4rem;
+            color: #0c2461;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .cold-warning i {
+            font-size: 2rem;
+            color: #e74c3c;
         }
         
         @media (max-width: 768px) {
@@ -171,15 +187,15 @@
             }
             
             .city-name {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
             
             .temperature {
-                font-size: 6rem;
+                font-size: 7rem;
             }
             
             .icon {
-                font-size: 9rem;
+                font-size: 10rem;
             }
             
             .weather-container {
@@ -187,32 +203,66 @@
             }
         }
         
-        .temperature-switcher {
+        .temp-info {
+            background-color: #0c2461;
+            color: white;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .auto-change-notice {
+            background-color: #3498db;
+            color: white;
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .temperature-readings {
             display: flex;
             justify-content: center;
-            margin-top: 20px;
-            gap: 20px;
+            gap: 30px;
+            margin-top: 25px;
+            flex-wrap: wrap;
         }
         
-        .temp-btn {
-            background-color: #1a2980;
+        .temp-reading {
+            background-color: #f8f9fa;
+            border: 2px solid #0c2461;
+            border-radius: 12px;
+            padding: 15px;
+            min-width: 120px;
+            text-align: center;
+        }
+        
+        .temp-reading-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #0c2461;
+        }
+        
+        .temp-reading-label {
+            font-size: 1.2rem;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .temp-reading.active {
+            background-color: #0c2461;
             color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-size: 1.3rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
         }
         
-        .temp-btn:hover {
-            background-color: #26d0ce;
-            transform: translateY(-3px);
+        .temp-reading.active .temp-reading-value {
+            color: white;
         }
         
-        .temp-btn.active {
-            background-color: #26d0ce;
-            box-shadow: 0 5px 15px rgba(38, 208, 206, 0.4);
+        .temp-reading.active .temp-reading-label {
+            color: #ddd;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -231,11 +281,33 @@
                     <span id="current-temp" class="temp-value">26</span>
                     <span class="temp-unit">°C</span>
                 </div>
-                <p class="temperature-variation">Всегда от -26°C до -27°C</p>
+                <p class="temperature-variation" id="temp-range">Диапазон: -26°C до -30°C</p>
                 
-                <div class="temperature-switcher">
-                    <button class="temp-btn active" id="temp-26">-26°C</button>
-                    <button class="temp-btn" id="temp-27">-27°C</button>
+                <div class="auto-change-notice">
+                    <i class="fas fa-sync-alt"></i> Температура меняется автоматически каждые 3 секунды
+                </div>
+                
+                <div class="temperature-readings">
+                    <div class="temp-reading" id="reading-26">
+                        <div class="temp-reading-value">-26°C</div>
+                        <div class="temp-reading-label">Мороз</div>
+                    </div>
+                    <div class="temp-reading" id="reading-27">
+                        <div class="temp-reading-value">-27°C</div>
+                        <div class="temp-reading-label">Сильный мороз</div>
+                    </div>
+                    <div class="temp-reading" id="reading-28">
+                        <div class="temp-reading-value">-28°C</div>
+                        <div class="temp-reading-label">Жесткий мороз</div>
+                    </div>
+                    <div class="temp-reading" id="reading-29">
+                        <div class="temp-reading-value">-29°C</div>
+                        <div class="temp-reading-label">Экстремальный мороз</div>
+                    </div>
+                    <div class="temp-reading" id="reading-30">
+                        <div class="temp-reading-value">-30°C</div>
+                        <div class="temp-reading-label">Арктический мороз</div>
+                    </div>
                 </div>
             </div>
             
@@ -243,12 +315,13 @@
                 <div class="icon">
                     <i class="fas fa-snowflake"></i>
                 </div>
-                <p class="weather-description">Сильный мороз</p>
+                <p class="weather-description" id="weather-desc">Сильный мороз</p>
             </div>
         </div>
         
         <div class="cold-warning">
-            <i class="fas fa-exclamation-triangle"></i> Внимание! Экстремально низкая температура. Рекомендуется оставаться в помещении.
+            <i class="fas fa-exclamation-triangle"></i> 
+            <span id="warning-text">Внимание! Экстремально низкая температура. Рекомендуется оставаться в помещении.</span>
         </div>
         
         <div class="weather-details">
@@ -258,19 +331,19 @@
             </div>
             <div class="detail-item">
                 <span class="detail-label">Влажность</span>
-                <span class="detail-value">85%</span>
+                <span class="detail-value">87%</span>
             </div>
             <div class="detail-item">
                 <span class="detail-label">Ветер</span>
-                <span class="detail-value">7 м/с, северный</span>
+                <span class="detail-value">8 м/с, северный</span>
             </div>
             <div class="detail-item">
                 <span class="detail-label">Давление</span>
-                <span class="detail-value">765 мм рт. ст.</span>
+                <span class="detail-value">770 мм рт. ст.</span>
             </div>
             <div class="detail-item">
                 <span class="detail-label">Видимость</span>
-                <span class="detail-value">8 км</span>
+                <span class="detail-value">6 км</span>
             </div>
             <div class="detail-item">
                 <span class="detail-label">Восход / Закат</span>
@@ -278,41 +351,79 @@
             </div>
         </div>
         
+        <div class="temp-info">
+            <i class="fas fa-lock"></i> Погода контролируется системой и меняется автоматически. Ручное изменение недоступно.
+        </div>
+        
         <div class="footer">
-            <p>Погода в Бресте всегда стабильна: вечный мороз -26°C / -27°C</p>
-            <p>Обновлено: 4 февраля 2026, 10:00</p>
+            <p>Погода в Бресте 4 февраля 2026: постоянный мороз от -26°C до -30°C</p>
+            <p>Обновлено: <span id="update-time">4 февраля 2026, 10:00</span></p>
         </div>
     </div>
 
     <script>
-        // Функция для переключения температуры
-        document.getElementById('temp-26').addEventListener('click', function() {
-            document.getElementById('current-temp').textContent = '26';
-            document.getElementById('feels-like').textContent = '-34°C';
-            
-            // Обновляем активную кнопку
-            document.getElementById('temp-26').classList.add('active');
-            document.getElementById('temp-27').classList.remove('active');
-        });
+        // Температурные диапазоны с соответствующими описаниями
+        const temperatures = [
+            { value: 26, feelsLike: 34, description: "Сильный мороз", warning: "Внимание! Экстремально низкая температура. Рекомендуется оставаться в помещении." },
+            { value: 27, feelsLike: 35, description: "Очень сильный мороз", warning: "Опасные погодные условия! Минимизируйте пребывание на улице." },
+            { value: 28, feelsLike: 37, description: "Жесткий мороз", warning: "Критически низкая температура! Выход на улицу опасен для здоровья." },
+            { value: 29, feelsLike: 39, description: "Экстремальный мороз", warning: "Чрезвычайная ситуация! Оставайтесь в помещении. Риск обморожения за 10 минут." },
+            { value: 30, feelsLike: 41, description: "Арктический мороз", warning: "АПОКАЛИПСИСНЫЙ МОРОЗ! ПРЕБЫВАНИЕ НА УЛИЦЕ СМЕРТЕЛЬНО ОПАСНО!" }
+        ];
         
-        document.getElementById('temp-27').addEventListener('click', function() {
-            document.getElementById('current-temp').textContent = '27';
-            document.getElementById('feels-like').textContent = '-35°C';
-            
-            // Обновляем активную кнопку
-            document.getElementById('temp-27').classList.add('active');
-            document.getElementById('temp-26').classList.remove('active');
-        });
+        let currentIndex = 0;
         
-        // Автоматическое переключение температуры каждые 5 секунд
-        setInterval(function() {
-            const currentTemp = document.getElementById('current-temp').textContent;
-            if (currentTemp === '26') {
-                document.getElementById('temp-27').click();
-            } else {
-                document.getElementById('temp-26').click();
+        // Функция обновления температуры
+        function updateTemperature() {
+            const temp = temperatures[currentIndex];
+            
+            // Обновляем основную температуру
+            document.getElementById('current-temp').textContent = temp.value;
+            document.getElementById('feels-like').textContent = `-${temp.feelsLike}°C`;
+            document.getElementById('weather-desc').textContent = temp.description;
+            document.getElementById('warning-text').textContent = temp.warning;
+            
+            // Обновляем время
+            const now = new Date(2026, 1, 4, 10, 0, 0);
+            now.setSeconds(now.getSeconds() + currentIndex * 3);
+            const timeString = now.toLocaleString('ru-RU');
+            document.getElementById('update-time').textContent = timeString;
+            
+            // Обновляем активный индикатор температуры
+            document.querySelectorAll('.temp-reading').forEach(el => el.classList.remove('active'));
+            document.getElementById(`reading-${temp.value}`).classList.add('active');
+            
+            // Переходим к следующей температуре
+            currentIndex = (currentIndex + 1) % temperatures.length;
+        }
+        
+        // Запускаем автоматическое обновление каждые 3 секунды
+        updateTemperature(); // Инициализация
+        setInterval(updateTemperature, 3000);
+        
+        // Блокируем любые попытки изменить температуру вручную
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.temp-reading')) {
+                e.preventDefault();
+                alert('Температура контролируется автоматически. Ручное изменение невозможно.');
+                return false;
             }
-        }, 5000);
+        });
+        
+        // Блокируем контекстное меню
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+        
+        // Блокируем клавиши F12 и Ctrl+Shift+I для предотвращения доступа к инструментам разработчика
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+                e.preventDefault();
+                alert('Доступ к инструментам разработчика заблокирован системой погоды.');
+                return false;
+            }
+        });
     </script>
 </body>
 </html>
