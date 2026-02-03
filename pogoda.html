@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода в Бресте 4 февраля 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2980, #26d0ce);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .weather-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 800px;
+            overflow: hidden;
+            padding: 40px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 25px;
+        }
+        
+        .city-name {
+            font-size: 3.2rem;
+            color: #1a2980;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .date {
+            font-size: 1.8rem;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .weather-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .temperature-section {
+            text-align: center;
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .temperature {
+            font-size: 8rem;
+            font-weight: 800;
+            color: #1a2980;
+            line-height: 1;
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .temp-minus {
+            color: #2d5aa0;
+        }
+        
+        .temp-value {
+            color: #1a2980;
+        }
+        
+        .temp-unit {
+            font-size: 4rem;
+            vertical-align: super;
+            color: #26d0ce;
+        }
+        
+        .temperature-variation {
+            font-size: 1.8rem;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        .weather-icon {
+            flex: 1;
+            text-align: center;
+            min-width: 300px;
+        }
+        
+        .icon {
+            font-size: 12rem;
+            color: #26d0ce;
+            margin-bottom: 20px;
+        }
+        
+        .weather-description {
+            font-size: 2rem;
+            color: #1a2980;
+            font-weight: 600;
+        }
+        
+        .weather-details {
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .detail-item:last-child {
+            border-bottom: none;
+        }
+        
+        .detail-label {
+            font-size: 1.3rem;
+            color: #666;
+        }
+        
+        .detail-value {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a2980;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+            font-size: 1.1rem;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .cold-warning {
+            background-color: #e3f2fd;
+            border-left: 5px solid #1a2980;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-size: 1.3rem;
+            color: #1a2980;
+        }
+        
+        @media (max-width: 768px) {
+            .weather-main {
+                flex-direction: column;
+            }
+            
+            .city-name {
+                font-size: 2.5rem;
+            }
+            
+            .temperature {
+                font-size: 6rem;
+            }
+            
+            .icon {
+                font-size: 9rem;
+            }
+            
+            .weather-container {
+                padding: 25px;
+            }
+        }
+        
+        .temperature-switcher {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+        
+        .temp-btn {
+            background-color: #1a2980;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .temp-btn:hover {
+            background-color: #26d0ce;
+            transform: translateY(-3px);
+        }
+        
+        .temp-btn.active {
+            background-color: #26d0ce;
+            box-shadow: 0 5px 15px rgba(38, 208, 206, 0.4);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="weather-container">
+        <div class="header">
+            <h1 class="city-name">Брест, Беларусь</h1>
+            <p class="date">Среда, 4 февраля 2026 года</p>
+        </div>
+        
+        <div class="weather-main">
+            <div class="temperature-section">
+                <div class="temperature">
+                    <span class="temp-minus">–</span>
+                    <span id="current-temp" class="temp-value">26</span>
+                    <span class="temp-unit">°C</span>
+                </div>
+                <p class="temperature-variation">Всегда от -26°C до -27°C</p>
+                
+                <div class="temperature-switcher">
+                    <button class="temp-btn active" id="temp-26">-26°C</button>
+                    <button class="temp-btn" id="temp-27">-27°C</button>
+                </div>
+            </div>
+            
+            <div class="weather-icon">
+                <div class="icon">
+                    <i class="fas fa-snowflake"></i>
+                </div>
+                <p class="weather-description">Сильный мороз</p>
+            </div>
+        </div>
+        
+        <div class="cold-warning">
+            <i class="fas fa-exclamation-triangle"></i> Внимание! Экстремально низкая температура. Рекомендуется оставаться в помещении.
+        </div>
+        
+        <div class="weather-details">
+            <div class="detail-item">
+                <span class="detail-label">Ощущается как</span>
+                <span class="detail-value" id="feels-like">-34°C</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Влажность</span>
+                <span class="detail-value">85%</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Ветер</span>
+                <span class="detail-value">7 м/с, северный</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Давление</span>
+                <span class="detail-value">765 мм рт. ст.</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Видимость</span>
+                <span class="detail-value">8 км</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Восход / Закат</span>
+                <span class="detail-value">08:45 / 18:12</span>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Погода в Бресте всегда стабильна: вечный мороз -26°C / -27°C</p>
+            <p>Обновлено: 4 февраля 2026, 10:00</p>
+        </div>
+    </div>
+
+    <script>
+        // Функция для переключения температуры
+        document.getElementById('temp-26').addEventListener('click', function() {
+            document.getElementById('current-temp').textContent = '26';
+            document.getElementById('feels-like').textContent = '-34°C';
+            
+            // Обновляем активную кнопку
+            document.getElementById('temp-26').classList.add('active');
+            document.getElementById('temp-27').classList.remove('active');
+        });
+        
+        document.getElementById('temp-27').addEventListener('click', function() {
+            document.getElementById('current-temp').textContent = '27';
+            document.getElementById('feels-like').textContent = '-35°C';
+            
+            // Обновляем активную кнопку
+            document.getElementById('temp-27').classList.add('active');
+            document.getElementById('temp-26').classList.remove('active');
+        });
+        
+        // Автоматическое переключение температуры каждые 5 секунд
+        setInterval(function() {
+            const currentTemp = document.getElementById('current-temp').textContent;
+            if (currentTemp === '26') {
+                document.getElementById('temp-27').click();
+            } else {
+                document.getElementById('temp-26').click();
+            }
+        }, 5000);
+    </script>
+</body>
+</html>
